@@ -7,12 +7,13 @@
 	export default {
 	}
 </script>
-<style scoped lang="scss">
+<style scoped>
+@import '../../css/variables.css';
 .header{
 	height: 200px;
 	text-align: center;
 	line-height: 200px;
 	color: #fff;
-	background: #dc1f34;
+	background: var(--color-dc1f34);
 }
 </style>

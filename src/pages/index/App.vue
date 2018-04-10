@@ -20,7 +20,8 @@
 		}
 	}
 </script>
-<style scoped lang="scss">
+<style scoped>
+@import '../../css/common.css';
 .container{
 	height: 300px;
 	text-align: center;

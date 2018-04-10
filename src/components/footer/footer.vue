@@ -7,12 +7,13 @@
 	export default {
 	}
 </script>
-<style scoped lang="scss">
+<style scoped>
+@import '../../css/variables.css';
 .footer{
 	height: 200px;
 	text-align: center;
 	line-height: 200px;
 	color: #fff;
-	background: #000000;
+	background: var(--color-000000);
 }
 </style>
