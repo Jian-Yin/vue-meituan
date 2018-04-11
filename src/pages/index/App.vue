@@ -2,7 +2,7 @@
 	<div id="wrapper">
 		<headerCom></headerCom>
 		<section class="container">
-			this page is index
+			<p>this page is index</p>
 		</section>
 		<footerCom></footerCom>
 	</div>
@@ -24,7 +24,9 @@
 @import '../../css/common.css';
 .container{
 	height: 300px;
-	text-align: center;
-	line-height: 50px;
+	& p{
+		text-align: center;
+		line-height: 50px;
+	}
 }
 </style>

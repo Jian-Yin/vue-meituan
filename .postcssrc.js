@@ -6,7 +6,6 @@ module.exports = {
     "postcss-url": {},
     // to edit target browsers: use "browserslist" field in package.json
     // "autoprefixer": {},
-	"postcss-write-svg": { utf8: false},
     "postcss-cssnext": {},
 	"postcss-px-to-viewport": { 
 		viewportWidth: 750, 	// 视窗的宽度，对应的是我们设计稿的宽度，一般是750 
