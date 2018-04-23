@@ -4,7 +4,21 @@
 	</header>
 </template>
 <script>
+	import '../../css/common.css'
 	export default {
+		data(){
+			return{}
+		},
+		beforeCreate(){},
+		created(){},
+		beforeMount(){},
+		mounted(){
+			console.log(0);
+		},
+		beforeUpdate(){},
+		updated(){},
+		beforeDestroy(){},
+		destroyed(){}
 	}
 </script>
 <style scoped>

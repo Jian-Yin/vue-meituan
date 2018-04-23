@@ -4,6 +4,7 @@
 	</footer>
 </template>
 <script>
+	import '../../css/common.css'
 	export default {
 	}
 </script>

@@ -8,6 +8,7 @@
 	</div>
 </template>
 <script>
+	import '../../css/common.css'
 	import headerCom from '../../components/header/header';
 	import footerCom from '../../components/footer/footer';
 	export default {
@@ -21,7 +22,7 @@
 	}
 </script>
 <style scoped>
-@import '../../css/common.css';
+@import '../../css/variables.css';
 .container{
 	height: 300px;
 	& p{
