@@ -8,16 +8,11 @@
 	</div>
 </template>
 <script>
-	import '../../css/common.css'
-	import headerCom from '../../components/header/header';
-	import footerCom from '../../components/footer/footer';
 	export default {
 		data() {
 			return {}
 		},
 		components: {
-			headerCom,
-			footerCom
 		}
 	}
 </script>

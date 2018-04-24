@@ -1,7 +1,7 @@
-import Vue from 'vue'
+import Common from '../../js/common'
 import App from './App'
 
-new Vue({
+new Common.Vue({
   el: '#app',
   render: h => h(App)
 })

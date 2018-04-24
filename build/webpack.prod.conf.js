@@ -94,6 +94,10 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.HashedModuleIdsPlugin(),
     // enable scope hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      minChunks: 2
+    }),
     // split vendor js into its own file
     // 将所有从node_modules中引入的js提取到vendor.js，即抽取库文件
     new webpack.optimize.CommonsChunkPlugin({
@@ -120,12 +124,12 @@ const webpackConfig = merge(baseWebpackConfig, {
     // in a separate chunk, similar to the vendor chunk
     // see: https://webpack.js.org/plugins/commons-chunk-plugin/#extra-async-commons-chunk
     // 使用新的异步加载的额外公共chunk
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'app',
-      async: 'vendor-async',
-      children: true,
-      minChunks: 3
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'app',
+    //   async: 'vendor-async',
+    //   children: true,
+    //   minChunks: 3
+    // }),
 
     // copy custom static assets
     // 将static文件夹里面的静态资源复制到dist/static

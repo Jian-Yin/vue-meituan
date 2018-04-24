@@ -32,7 +32,7 @@ exports.htmlPlugin = function (globPath) {
     let config = {
       filename: basename + '.html',
       template: template,
-      chunks: ['manifest', 'vendor', basename],
+      chunks: ['manifest', 'common', 'vendor', basename],
       inject: true
     }
     if(process.env.NODE_ENV === 'production'){
