@@ -16,11 +16,11 @@
 		}
 	}
 </script>
-<style scoped>
-@import '../../css/variables.css';
+<style lang="scss">
+@import '../../css/variables.scss';
 .container{
 	height: 300px;
-	& p{
+	p{
 		text-align: center;
 		line-height: 50px;
 	}

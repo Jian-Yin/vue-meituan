@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-import '../css/common.css'
+import '../css/common.scss'
 
 import headerCom from '../components/header/header';
 import footerCom from '../components/footer/footer';

@@ -4,17 +4,17 @@
 	</footer>
 </template>
 <script>
-	import '../../css/common.css'
+	import '../../css/common.scss'
 	export default {
 	}
 </script>
-<style scoped>
-@import '../../css/variables.css';
+<style lang="scss">
+@import '../../css/variables.scss';
 .footer{
 	height: 200px;
 	text-align: center;
 	line-height: 200px;
 	color: #fff;
-	background: var(--color-000000);
+	background: $color-000000;
 }
 </style>

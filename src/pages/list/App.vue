@@ -16,8 +16,8 @@
 		}
 	}
 </script>
-<style scoped>
-@import '../../css/variables.css';
+<style lang="scss">
+@import '../../css/variables.scss';
 .container{
 	height: 300px;
 	text-align: center;

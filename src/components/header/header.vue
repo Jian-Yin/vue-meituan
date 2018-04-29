@@ -4,7 +4,7 @@
 	</header>
 </template>
 <script>
-	import '../../css/common.css'
+	import '../../css/common.scss'
 	export default {
 		data(){
 			return{}
@@ -21,13 +21,13 @@
 		destroyed(){}
 	}
 </script>
-<style scoped>
-@import '../../css/variables.css';
+<style lang="scss">
+@import '../../css/variables.scss';
 .header{
 	height: 200px;
 	text-align: center;
 	line-height: 200px;
 	color: #fff;
-	background: var(--color-dc1f34);
+	background: $color-dc1f34;
 }
 </style>
