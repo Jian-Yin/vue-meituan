@@ -3,6 +3,8 @@
 		<headerCom></headerCom>
 		<section class="container">
 			<p>this page is index</p>
+			<iconSvg icon-class="user" />
+			<iconSvg icon-class="search" />
 		</section>
 		<footerCom></footerCom>
 	</div>

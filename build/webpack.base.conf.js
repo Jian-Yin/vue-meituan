@@ -47,10 +47,25 @@ module.exports = {
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
+        // 对 svg 使用 svg-sprite-loader svgo-loader
+      {
+        test: /\.svg$/,
+        include: [resolve('src/icons')],
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              symbolId: 'icon-[name]'
+            }
+          },
+          'svgo-loader'
+        ]
+      },
       {
         // 对图片资源文件使用url-loader
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
+        exclude: [resolve('src/icons')],
         options: {
           // 小于10K的图片转成base64编码的dataURL字符串写到代码中
           limit: 10000,
