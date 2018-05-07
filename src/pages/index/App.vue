@@ -4,9 +4,8 @@
 		<section class="container">
 			<p>this page is index</p>
 			<iconSvg icon-class="user" />
-			<iconSvg icon-class="search" />
 		</section>
-		<footerCom></footerCom>
+		<footerCom page-name="home"></footerCom>
 	</div>
 </template>
 <script>
@@ -25,6 +24,11 @@
 	p{
 		text-align: center;
 		line-height: 50px;
+	}
+	.icon-user{
+		width: 60px;
+		height: 60px;
+		color: red;
 	}
 }
 </style>

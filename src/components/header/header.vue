@@ -28,6 +28,5 @@
 	text-align: center;
 	line-height: 200px;
 	color: #fff;
-	background: $color-dc1f34;
 }
 </style>
