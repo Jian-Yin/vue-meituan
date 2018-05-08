@@ -13,8 +13,11 @@
 		data() {
 			return {}
 		},
-		components: {
-		}
+		mounted(){
+			this.axios.get('/api/getUserInfo/a').then(function(response){
+				console.log(response);
+			})
+		},
 	}
 </script>
 <style lang="scss">

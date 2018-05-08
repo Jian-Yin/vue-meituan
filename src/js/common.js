@@ -1,4 +1,6 @@
 import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
 import '../css/common.scss'
 
@@ -10,6 +12,8 @@ import footerCom from '../components/footer/footer'
 const requireAll = requireContext => requireContext.keys().map(requireContext)
 const req = require.context('../icons', false, /\.svg$/)
 requireAll(req)
+
+Vue.use(VueAxios, axios)
 
 Vue.component('iconSvg', iconSvg)
 Vue.component('headerCom', headerCom)
