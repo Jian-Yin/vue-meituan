@@ -14,8 +14,8 @@
 			return {}
 		},
 		mounted(){
-			this.axios.get('/api/getUserInfo/a').then(function(response){
-				console.log(response);
+			this.axios.get('/api/userInfo').then(function(response){
+				// console.log(response.data);
 			})
 		},
 	}
