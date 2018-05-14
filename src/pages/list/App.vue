@@ -1,6 +1,6 @@
 <template>
 	<div id="wrapper">
-		<headerCom></headerCom>
+		<headerCom header-title="分类"></headerCom>
 		<section class="container">
 			this page is list
 		</section>

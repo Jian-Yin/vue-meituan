@@ -1,6 +1,6 @@
 <template>
 	<div id="wrapper">
-		<headerCom></headerCom>
+		<!-- <headerCom></headerCom> -->
 		<section class="container">
 			this page is pdp
 		</section>

@@ -95,7 +95,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     // enable scope hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'common'
+      name: 'common',
+      minChunks: 2
     }),
     // split vendor js into its own file
     // 将所有从node_modules中引入的js提取到vendor.js，即抽取库文件

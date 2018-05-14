@@ -1,37 +1,27 @@
 <template>
 	<div id="wrapper">
-		<headerCom></headerCom>
+		<!-- <headerCom header-title="购物车"></headerCom> -->
+		<headerPage></headerPage>
 		<section class="container">
-			<p>this page is index</p>
-			<iconSvg icon-class="user" />
 		</section>
 		<footerCom page-name="home"></footerCom>
 	</div>
 </template>
 <script>
+	import headerPage from './components/header'
 	export default {
 		data() {
 			return {}
 		},
-		mounted(){
-			this.axios.get('/api/userInfo').then(function(response){
-				// console.log(response.data);
-			})
+		components: {
+			headerPage
+		},
+		mounted() {
 		},
 	}
 </script>
 <style lang="scss">
 @import '../../css/variables.scss';
 .container{
-	height: 300px;
-	p{
-		text-align: center;
-		line-height: 50px;
-	}
-	.icon-user{
-		width: 60px;
-		height: 60px;
-		color: red;
-	}
 }
 </style>

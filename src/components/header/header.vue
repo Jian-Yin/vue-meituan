@@ -1,54 +1,56 @@
 <template>
 	<header class="header">
 		<div class="header-container">
-			<div class="header-search">
-				<div class="header-left"><a><iconSvg icon-class="logo" /></a></div>
-				<div class="header-middle">
-					<div class="search-box"><iconSvg icon-class="search" /><span>搜索商品名称</span></a></div>
-				</div>
-				<div class="header-right"><a><iconSvg icon-class="user" /></a></div>
-			</div>
-			<div class="header-nav swiper-container" ref="swiperNav">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" v-for="(item, index) in navList" :key="index">
-						<span>{{item}}</span>
-					</div>
-				</div>
-			</div>
+			<div class="header-left"><a href=""><iconSvg icon-class="arrow-left" /></a></div>
+			<div class="header-middle"><span>{{headerTitle}}</span></div>
+			<div class="header-right"><a href=""><iconSvg icon-class="search" /></a></div>
 		</div>
 	</header>
 </template>
 <script>
 	import '../../css/common.scss'
-	import 'swiper/dist/css/swiper.min.css';
-	import Swiper from 'swiper';
 	export default {
-		data(){
-			return{
-				navList: []
+		props: {
+			headerTitle: {
+				type: String,
+				required: true
 			}
-		},
-		mounted(){
-			this.axios.get('/api/index/headerNav').then(response => {
-				let tabs = response.data.data.tabs
-				for (let i = 0, j = tabs.length; i < j; i++) {
-					this.navList.push(tabs[i].name);
-				}
-				this.$nextTick(() => {
-					this.swiper = new Swiper(this.$refs.swiperNav, {})
-				})
-			})
 		}
 	}
 </script>
 <style lang="scss">
 @import '../../css/variables.scss';
 .header{
-	height: 82px;
+	height: 50px;
 	.header-container{
 		position: fixed;
 		top: 0;
-		height: 82px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 50px;
+		color: $color-666666;
+		background: $color-f2f2f2;
+		box-shadow: 0 2px 4px -1px rgba(0,0,0,.2);
+		.header-left,.header-right{
+			padding: 5px 10px;
+			a{
+				display: block;
+			}
+		}
+		.header-middle{
+			font-size: 16px;
+			line-height: 50px;
+		}
+		.icon-arrow-left{
+			width: 25px;
+			height: 25px;
+		}
+		.icon-search{
+			width: 30px;
+			height: 30px;
+		}
 	}
 }
 </style>
